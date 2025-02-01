@@ -4,3 +4,10 @@ services:
     build:
       context: .
       dockerfile: src/Services/Identity.API/Dockerfile
+
+  web.forum.httpaggregator:
+    image: ${DOCKER_REGISTRY-}webforumhttpaggregator
+    build:
+      context: .
+      dockerfile: src/ApiGateways/Web.Bff.Forum/Web.Forum.HttpAggregator/Dockerfile
+
